@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+<div class="container d-flex">
+  <!-- Contenido principal -->
+  <main class="w-100 d-flex justify-content-center">
+    <!-- Formulario para ingresar personas -->
+    <div class="mt-4 w-75">
+      <form class="" id="persona-form" [formGroup]="form()" (submit)="submit()">
+        <div class="card w-100">
+          <div class="card-body">
+            <input
+              type="text"
+              class="form-control form-control-lg mb-2"
+              value="Encuesta sin titulo"
+              formControlName="titulo"
+            />
+            <textarea
+              name="descripcion"
+              placeholder="Descripcion de la encuesta"
+              class="form-control"
+              rows="3"
+              formControlName="descripcion"
+            ></textarea>
+          </div>
+        </div>
+        <div formArrayName="preguntas">
+          @for (item of preguntas.controls; track $index;let i = $index) {
+          <section class="card w-100 mt-2" [formGroupName]="i">
+            <div class="card-body">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="pregunta"
+              />
+              <ul class="list-group list-group-flush" formArrayName="opciones">
+                @if (preguntas.value.tipoPregunta === "selecionUnica") { @for
+                (opcion of getopciones(i).controls; track $index; let j =
+                $index) {
+                <li class="list-group-item">
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input
+                        disabled
+                        class="form-check-input mt-0"
+                        type="radio"
+                        value=""
+                      />
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-label="Text input with checkbox"
+                      [formControlName]="j"
+                    />
+                  </div>
+                </li>
+                } }@else if (preguntas.value.tipoPregunta ===
+                "selecionMultiple") { @for (opcion of getopciones(i).controls;
+                track $index; let j = $index) {
+                <li class="list-group-item">
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">
+                      <input
+                        disabled
+                        class="form-check-input mt-0"
+                        type="checkbox"
+                        
+                      />
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      aria-label="Text input with checkbox"
+                      [formControlName]="j"
+                    />
+                  </div>
+                </li>
+                } }@else if (preguntas.value.tipoPregunta === "abierta") { 
+                  @for(opcion of getopciones(i).controls; track $index; let j = $index) {
+                <li class="list-group-item">
+                  <textarea
+                    name="descripcion"
+                    placeholder="Descripcion de la encuesta"
+                    class="form-control"
+                    rows="3"
+                    formControlName="descripcion"
+                  ></textarea>
+                </li>
+                } }
+              </ul>
+            </div>
+          </section>
+          }
+        </div>
+        <button type="submit" class="btn btn-success mt-2">guardar</button>
+        <button type="button" class="btn btn-warning mt-2 ms-2">
+          añadir pregunta
+        </button>
+      </form>
+    </div>
+  </main>
+</div>
+{{ form().value | json }}

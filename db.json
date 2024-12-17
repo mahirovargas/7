@@ -1,0 +1,138 @@
+{
+  "encuestas": [
+    {
+      "id": "1",
+      "titulo": "prueba",
+      "fecha": "10/10/2010",
+      "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt dolores delectus adipisci quasi officia obcaecati, voluptas omnis reiciendis minus deleniti. Repellat minus debitis assumenda accusamus? Magni eligendi adipisci eos distinctio.",
+      "preguntas": [
+        {
+          "idPregunta": "3222",
+          "pregunta": "¿sabes que es el anime?",
+          "tipoPregunta": "selecionUnica",
+          "respuestas": [
+            "si",
+            "no"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a0d31c88-db6c-4982-9c74-779851e504db",
+      "titulo": "Encuesta sin titulo",
+      "preguntas": [
+        {
+          "idpregunta": "8e2d762f-cec8-486b-863b-c76559642ef1",
+          "pregunta": "pregunta 1",
+          "orden": 0,
+          "tipoPregunta": "abierta",
+          "opciones": [
+            "opcion 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8d5cf28e-0ffb-4c8b-89f8-e8cf7c321455",
+      "titulo": "Encuesta sin titulo",
+      "preguntas": [
+        {
+          "idpregunta": "e45e91cd-3d82-4438-9fe9-fe9ad92411cc",
+          "pregunta": "pregunta 1",
+          "orden": 0,
+          "tipoPregunta": "selecionUnica",
+          "opciones": [
+            "opcion 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9d9a715f-6df3-4ae3-b442-47ee3105cd22",
+      "titulo": "Encuesta sin titulo",
+      "preguntas": [
+        {
+          "idpregunta": "6aefecfb-1e29-40fa-8d90-38d0f4a54a20",
+          "pregunta": "pregunta 1",
+          "orden": 0,
+          "tipoPregunta": "selecionUnica",
+          "opciones": [
+            "opcion 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dfa01430-00c9-46a7-a2af-898873163962",
+      "titulo": "Encuesta sin titulo",
+      "preguntas": [
+        {
+          "idpregunta": "b7fe650e-ea31-4f5d-a86c-b174dc9a51b6",
+          "pregunta": "pregunta 1",
+          "orden": 0,
+          "tipoPregunta": "selecionUnica",
+          "opciones": [
+            "opcion 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d273eca1-5369-40d7-9ab1-6eaa73823b9f",
+      "titulo": "Encuesta sin titulo",
+      "preguntas": [
+        {
+          "idpregunta": "8b9a302c-7d65-459e-ba81-d3148a21267f",
+          "pregunta": "pregunta 1",
+          "orden": 0,
+          "tipoPregunta": "selecionUnica",
+          "opciones": [
+            "opcion 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "70f5a763-cda0-4dcf-8d6e-7285df1db9c7",
+      "titulo": "Encuesta sin titulo",
+      "preguntas": [
+        {
+          "idpregunta": "b77912ed-a6d2-418b-a529-99da90d942dd",
+          "pregunta": "pregunta 1",
+          "orden": 0,
+          "tipoPregunta": "selecionUnica",
+          "opciones": [
+            "opcion 1"
+          ]
+        }
+      ]
+    }
+  ],
+  "tiposPreguntas": {
+    "selecionUnica": 0,
+    "abierta": 1,
+    "selecionMultiple": 2
+  },
+  "usuarios": [
+    {
+      "userId": "1024",
+      "username": "jonPro",
+      "email": "johnPro@gmail.com",
+      "password": "1234",
+      "id": "b229"
+    }
+  ],
+  "respuestas": [
+    {
+      "idEncuesta": "1",
+      "nombreInstitucion": "salesiano",
+      "respuesta": [
+        {
+          "idPregunta": "3222",
+          "respuesta": "si"
+        }
+      ],
+      "id": "139f"
+    }
+  ]
+}
